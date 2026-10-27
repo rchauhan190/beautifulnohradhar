@@ -91,7 +91,7 @@ function App() {
       <a className="brand" href="#top" aria-label="Nohradhar and Churdhar, Beyond the Clouds home"><span className="brand-mark"><Mountain size={20} strokeWidth={1.7}/></span><span>Nohradhar &amp; Churdhar <i>Beyond the Clouds</i></span></a>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? <X/> : <Menu/>}</button>
       <nav className={menuOpen ? 'nav open' : 'nav'}>
-        <a href="#places" onClick={() => setMenuOpen(false)}>Discover</a><a href="#region-guide" onClick={() => setMenuOpen(false)}>The region</a><a href="#trail" onClick={() => setMenuOpen(false)}>The trail</a><a href="#visit" onClick={() => setMenuOpen(false)}>Plan your visit</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="#places" onClick={() => setMenuOpen(false)}>Discover</a><a href="#region-guide" onClick={() => setMenuOpen(false)}>The region</a><a href="#places-to-visit" onClick={() => setMenuOpen(false)}>Places</a><a href="#trail" onClick={() => setMenuOpen(false)}>The trail</a><a href="#visit" onClick={() => setMenuOpen(false)}>Plan your visit</a><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         <a className="nav-cta" href="#visit">Start exploring <ArrowUpRight size={15}/></a>
       </nav>
     </header>
@@ -126,6 +126,26 @@ function App() {
         <article className="region-card"><div className="region-image"><img src="/images/mountain-bus.jpg" alt="A mountain road winding through the hills toward Nohradhar" loading="lazy"/><span>01 / THE GATEWAY</span></div><div className="region-body"><span className="eyebrow">THE VALLEY &amp; TRAILHEAD</span><h3>Nohradhar</h3><p>Nohradhar is a mountain settlement in Sirmaur and a well-known starting point for the Churdhar walk. The Sirmaur district guide describes the approach as a scenic drive into the Nohradhar valley, where the trek begins. From Shimla, its listed road route runs via Solan and Rajgarh.</p><div className="region-facts"><div><strong>18 km</strong><span>APPROX. TREK TO THE SUMMIT</span></div><div><strong>Sirmaur</strong><span>HIMACHAL PRADESH</span></div></div><a className="text-link region-source" href="https://hpsirmaur.nic.in/churdhar-trek/" target="_blank" rel="noreferrer">Sirmaur district trek guide <ArrowUpRight size={14}/></a></div></article>
         <article className="region-card"><div className="region-image"><img src="/images/nohradhar-portrait.jpg" alt="A rocky Churdhar summit rising into the clouds" loading="lazy"/><span>02 / THE HIGH COUNTRY</span></div><div className="region-body"><span className="eyebrow">SUMMIT, SANCTUARY &amp; SHRINE</span><h3>Churdhar</h3><p>At 3,647 metres, Churdhar is Sirmaur’s highest peak. The surrounding 55.52 km² wildlife sanctuary protects mountain forests and high-altitude habitats. Below the summit, the Shirgul Devta shrine—also revered as Chooreshwar Mahadev—gives the mountain deep spiritual significance for local communities.</p><div className="region-facts"><div><strong>3,647 m</strong><span>SUMMIT ELEVATION</span></div><div><strong>55.52 km²</strong><span>WILDLIFE SANCTUARY</span></div></div><a className="text-link region-source" href="https://himachaltourism.gov.in/destination/sirmaur/" target="_blank" rel="noreferrer">Himachal Tourism · Sirmaur <ArrowUpRight size={14}/></a><a className="text-link region-source" href="https://hpforest.gov.in/protected-area-detail-4" target="_blank" rel="noreferrer">Himachal Forest Department <ArrowUpRight size={14}/></a></div></article>
       </div></section>
+
+      <section className="jamnala-section" id="places-to-visit">
+        <div className="jamnala-heading">
+          <div><span className="eyebrow">PLACES TO VISIT NEAR NOHRADHAR</span><h2>Discover <em>Jamnala.</em></h2></div>
+          <p>Explore Jamnala’s quiet forest setting, striking rock formations and open mountain views. These photos capture its character. Ask a local about the route and current access before setting out.</p>
+        </div>
+        <div className="jamnala-grid">
+          <button className="jamnala-photo jamnala-tree" onClick={() => setActivePhoto('jamnala/jamnala-01.jpg')} aria-label="Enlarge Jamnala forest landmark photo"><img src="/images/jamnala/jamnala-01.jpg" alt="A large hollow tree among the forest at Jamnala" loading="lazy"/><span>01 · FOREST LANDMARK</span></button>
+          <button className="jamnala-photo jamnala-rock" onClick={() => setActivePhoto('jamnala/jamnala-02.jpg')} aria-label="Enlarge Jamnala rock formation photo"><img src="/images/jamnala/jamnala-02.jpg" alt="A dramatic natural rock formation in Jamnala" loading="lazy"/><span>02 · ROCK FORMATIONS</span></button>
+          <button className="jamnala-photo jamnala-view" onClick={() => setActivePhoto('jamnala/jamnala-03.jpg')} aria-label="Enlarge Jamnala mountain view photo"><img src="/images/jamnala/jamnala-03.jpg" alt="Clouds and distant mountain ridges viewed from Jamnala" loading="lazy"/><span>03 · MOUNTAIN VIEWS</span></button>
+        </div>
+        <article className="place-feature">
+          <button className="place-feature-photo" onClick={() => setActivePhoto('haripurdhar.jpg')} aria-label="Enlarge Haripurdhar temple photo"><img src="/images/haripurdhar.jpg" alt="Temple at Haripurdhar, set against the open sky" loading="lazy"/></button>
+          <div className="place-feature-copy"><span className="eyebrow">A TEMPLE STOP IN SIRMAUR</span><h3>Haripurdhar</h3><p>Add Haripurdhar to your journey for a visit to its hilltop temple and the mountain scenery around it. Check local route and access details before setting out.</p><a className="text-link light-link" href="https://www.google.com/maps/search/?api=1&query=Haripurdhar%2C%20Sirmaur%2C%20Himachal%20Pradesh" target="_blank" rel="noreferrer">Find Haripurdhar on Google Maps <ArrowUpRight size={15}/></a></div>
+        </article>
+        <article className="place-feature">
+          <button className="place-feature-photo" onClick={() => setActivePhoto('galio.jpg')} aria-label="Enlarge Galio temple photo"><img src="/images/galio.jpg" alt="A traditional hill temple among trees at Galio" loading="lazy"/></button>
+          <div className="place-feature-copy"><span className="eyebrow">A QUIET HILL TEMPLE</span><h3>Galio</h3><p>Stop at Galio to see the traditional temple beneath the trees and enjoy the open hillside setting. Ask locally about the route and access before visiting.</p><a className="text-link light-link" href="https://www.google.com/maps/search/?api=1&query=Galio%2C%20Nohradhar%2C%20Sirmaur%2C%20Himachal%20Pradesh" target="_blank" rel="noreferrer">Find Galio on Google Maps <ArrowUpRight size={15}/></a></div>
+        </article>
+      </section>
 
       <section className="gallery section-wrap" id="gallery">
         <div className="section-heading"><div><span className="eyebrow">SEEN ALONG THE WAY</span><h2>Postcards from <em>the trail.</em></h2></div><span className="heading-count">13 PHOTOS</span></div>
